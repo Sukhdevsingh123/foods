@@ -1,0 +1,138 @@
+<html>
+<head>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1{
+            width: 500px;
+            margin-left: 300px;
+            color: thistle;
+            background-color: brown;
+            text-align: center;
+        }
+        table{
+            width:1000px;
+            height:400px;
+            padding: 50px;
+            margin-top: 0px;
+
+        }
+    th{
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 90%;
+        border-top:5px solid rgb(27, 7, 117);
+        border-bottom:5px solid rgb(57, 11, 95); 
+        text-align: left;
+
+    }
+    tr{
+        background-color: yellow;
+        
+        border-left: 5px solid blue;
+    }
+    .special{
+        background-color: rgb(57, 10, 167);
+        padding: 10px;
+    }
+    .thank{
+        width: 50px;
+        text-align: center;
+        color: blue;
+        background-color: brown;
+    }
+    .order{
+        width: 150px;
+        height: 30px;
+        color: violet;
+        background-color: black;
+        text-transform: uppercase;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: larger;
+        font-weight: bolder;
+        text-align: center;
+    }
+    #input{
+        background-color: aqua;
+        width: 600px;
+        margin-left: 10px;
+        font-size: large;
+        font-weight: bold;
+
+    }
+    input#submit{
+        color:black;
+        text-shadow: 0px 5px 5px red;
+        text-align: center;
+        margin-left: 300px;
+        border-bottom: 2px solid red;
+        background-color:red;
+    }
+   input#submit:hover{
+        background-color: yellow;
+    }
+    </style>
+</head>
+<body>
+    <h1> OUR FAMOUS FOODS</h1>
+<table>
+    <tr>
+        <th class="money"> </th>
+        <th class="money"> Foods</th>
+        <th class="money"> Top Prices(in RS.)</th>
+        <th class="money"> Low Prices(in RS.)</th>
+        </tr>
+        <tr>
+            <td class="thank"> 1</td>
+            <td class="special"> Special Pizza</td>
+        <td> 200</td>
+        <td>100</td>
+        </tr>
+        <tr>
+            <td class="thank">2</td>
+            <td class="special">Cheese Burger</td>
+            <td>70</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td class="thank">3</td>
+            <td class="special"> Samosa</td>
+            <td> 20</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td class="thank">4</td>
+            <td class="special">Petiz</td>
+            <td>100</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td class="thank">5</td>
+            <td class="special">Chaumeen</td>
+            <td>50</td>
+            <td>30</td>
+        </tr>
+</table>
+<h1 class="order">
+Order now
+</h1>
+<div id="input">
+    <p>
+    Name:<input type="text" name="name" placeholder="Enter name">
+</p>
+<p>
+    Mobile No:<input type="number" name="number" placeholder="Enter mobile no.">
+</p>
+<p>
+    Email:<input type="email" name="email" placeholder="sukhdev34@gmail.com">
+</p>
+<p>
+Address:<textarea name="name" cols="15" rows="7"></textarea>
+</p>
+</div>
+<p>
+    <input type="submit" id="submit" value="Pay now"> 
+</p>
+</body>
+</html>
