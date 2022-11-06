@@ -2,137 +2,248 @@
 <head>
     <style>
         body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(6, 12, 6);
+            background-color: burlywood;
+            background-position: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.4em;
+            margin: 0px;
+        }
+        header{
+        
+            width: 1070px;
+            margin: 5px auto 50px auto;
+            border: 2px solid burlywood;        
+            height: 135px;
         }
         h1{
-            width: 500px;
-            margin-left: 300px;
-            color: thistle;
-            background-color: brown;
+            width: 960px;
+            text-align: center;
+            color: transparent;
+            background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEBMWFRUVFRUVFhUVFRAVFRAVFRUWFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGi0lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIASwAqAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EAEEQAAIBAgMFBQUGBQIFBQAAAAECAAMRBCExBRJBUWEicYGRsQYTMlKhQmKCwdHwFCNykuEHQzNTY8LxFXODstL/xAAbAQADAQEBAQEAAAAAAAAAAAACAwQFAQAGB//EADgRAAEDAgMGBAQEBQUAAAAAAAEAAhEDIQQxQRITUWFxgZGhsfAFIsHRFDJSYkJygpLhIzOiwvH/2gAMAwEAAhEDEQA/APnaRujFEjdGfpjlmJ7DzRoTOw80aEkqLy0KMcQxOlGlMhqIkQtA1Gks0BUaTrqhmgSZLNNTA7CdwHqsKNM57z/Ew+6mp7zaA97WCXH3yGZ7LpKySYZME5F7WHDeyv56eNpuVcNh6bWpb7WGdRgFYnoSLgd1oxhqh+z2RzDNvHvPGYeK+MhlqbT3VVDBmqJL2jlMu7iQB4lYdLY1Q6lfDeb0FvrDrsM8S/gg9LkxratKoLMtRmBvkSCRblzHhM6jUYHtf9w+oIIi6eJxddm9Y9scA0yOxgrwo4Xb3bnun+mPH5oU1cJSU2Znv3DLw1+kltnKf+HUB6MN0+GZ+to1Up+8Fi56BgXt3MTcecyKpYZHgY5ja1VocHxxGnmAfNJrfh8K40qrSToQbkHvHSyvVw7JkwIvpyPcRkfCVtN3ZRLUmLAPTsLhrkbx0txBtfMZi0za9Gxy0OnTmD3SYVXOLmvFxwyP1HS69iMOaQ22GW+Yn3pxSyiXCy605ZkiS2Su0TaSgPOhfdzo9tEwml8r5+kboxRI3Rn6M5Qp7DzRoTOw80aMjqLyfpGGDRemYTekT0alnnUqTObKOpOgUcyeAjAwlkFSodxTmCeC6b1vmJyA42PLKAj1AFQe7pXyDZvU+8w4nvHHISB+IaAToNdPfr0iQLzfZ9++Gfa6vTr06Oadt/8AmECwP/TB9cz0EOlSo53nF+PbLfnmfKDSlSpZs1j07VQ/i+yP3aBq7XTRKYYfez8xofG8yH1K2IMUWOI/UbD1E/3dtF0YJxvXfs8jn/aJjuOoC0KOPANkpe9PJA2XiJq4GqlQ7hT3VTQq9jnyBHoQJh4XbFxapXNIfLTT87WHkY4NoUbWRx3sXuenatYdBYTPrYYs+XcmeIDiO52Wt8A4/uVeHwGG0qxzkN8rk9wDyWjjdmlc2Nz14TKxNEEZ+cpV2pVAsGLDobgd1tB0mHicYxJJuONs/pNfAYLeNmQIUGJwop1bGfE97+ieFbdIsdIV6O/a3HKY1OoTNPZ9Y3HMEEdbZy+tg9gS3P39VPiACA46Z9F6OnS3KQprkNfxcTE6uGUDdGfI6cDf1ELiMWTpprFnxJ4mZGH+HvEudrcjWVbVxdMsNOmJMRPLl4Kj4e0haa8ZV619IQSjc7OiRtGIlCKAmTDooALNoBc/vnJhFwFiV4VD/CJXyhI3RiiRujPtnJqfoR+hEKEfpGR1F4JpDH9n0lJ36t/dqRcDM1GPw01HEn0mfh6Zdgqi5JsP3ynvdn4GnRRVsGYXzIBPa+I56X9MplYqpstgZlHIAl2SwK6vVfeqLvOPgpKN5aI4dL2Ft45Dwgzhqh1YLfUb97/1FPya3SVxuMCM6sbKrsAoyGTEXIGbHr6xL/1LPsD9858+KWOrXaA1vEiT/SMgOxP7jmtF9Gg0DaJAjJufc5z3HQFNtsU8CD4svqZlYrC7vHoRxB5GadDHOT2onjQTcnViT5m80MEyux8VHF3UrJe2m1wNObnIkm3e6QC9ZbcjVDBMVLAXC2v0vex+kImGPKa9tEVQsGaUVDGEonjG0wx4CX/hCNYDnBQvdwSqYcQxW3CGVLcYTcvFl5lAK5FjdBXENp6yjMToDHBTtwkqsAvAyauitT0b5oeEwxvc5TRpUhB0llMVjN0WX4v/AK9e+Q4isGgueV1pfUdstQNrV/8AbXQfF1PAeHr3ToiROmE+qajtorVpjdt2WlfPkjdGKJG6M/TnJKfoR2mYjRmpszDe9qKnAnM8lGbHykdUgCSuhen9k8OtMHEVBwIW/AfNbmTpC47bZLXyA7/qTFNrY4IN0aDIKOnL96TIGCvZ8QSL/BSW+899MtZkENB3j7k5D/Hqe5Sd4Xzw0Hu6VJV6jkBnu7EkZLmxyv8ApeaNFAg3nVUHUl2buUWjFfdorvVAFNsqa2O70b5mz0yXPjMHG4t27RyLZIBe/Vr8baDqb8IsVqlVwA1sPfvujbXc8hrcsvZ1T1bb6q1koiw4lu16WvNHZtWnUG/VRkBzA3gzVB8wBAsn3jlyvMvZGx8waq3PBNbdWH2u7TnyDu0cWFYKD7ypcKtO91U83tqel+GtouviAXbmg75syc7anOAP3HSY4iylu3mSCWDMzAnqdeQk9V6LDY2ijItMlSxsBum7EjQ2vnmNeY5w1fFUt+xZL3ItYJp4AeMydi4Ah1rMblLsCc9+o3xP3DQdw5QO0K6o5IN25i+XdymQ7HDf7FMB0C54mePrbloipBlalvHP2GyYv/DpAIvMLXrBCOwUJ4gMpH0NwZl4kkai085inLa2A1t/51nU8SwyDG3K5t5HKbFGoS2c/fH/ACs2ph2PfNM26R78FtrWEMuKE8/78mEWobTr60aJZwtrrbfGCR/GCYwcy6SKriSMl5uFaFqfxZOQkLS5wFBZqYVN6YeIqOeZcrqNLZs0JR6VhOhdq1QonSvD0S5kppbey+YJG6MUSN0Z+kOUy1GIsLLbd7JbgSyhvpnPRezlPcpvVPHsL3DNvM2H4YPZeCVsDWc69tx/8akj6x6rajRpqdQoy5sc2J6XJ+nOYlSpYs5+OvmUqrVBFunglK9UId9heofhBzFMcCRxPIeJjYpmgN9+1iH+bP3AOpP3reWnOMey2zfeE4qr8CElb/acauTyHr3Q5w3vXNRvgB5ZkahRzJ1+p4zHxmMpU3Oa4zGfM/pA4DM5c75rLHFkjpA9PXqQe/nq+EaoVBub9s8SdQo6knePkY1TwdOl/NqkXtZbZhBwFPmde1pe+Yhto7VpqSEAduWtNeADH/cNgMh2e+1553GYtqh3qjXPXQdwiqGHxOJEvJY05/qI4DgDqYE6WVdGg1l6tz+nTufoOhOYTOP2y7grSHu0Otvjf+pvyi2CxC0rkKd45XyFhxsYAW5iW3JqtwdBlPdNbDdYMT/Mcz3KOv8A642amXDIdIGnIROsp+p7QYgqFDAKBYC1yByvEXru3xMT+Ij0hKWGZvhBPp56RpNnH7TAd2c7Tw9Cl/tsA7BC51Nlnedz9VnCFUTQGDQcz3n9JIor8o+p9YT7od+05JWml4TdjlNByHlL+4HL1kdVlkcgpJVjVGlGEwoEMlCZNewlGxu0YUUKV48WCjKCTLIRXHYoAWExzLnwtSnTaxslI7QrXnRCtUuPP1nTZpUTs3SHESvKJG6MUSN0p+gOWWvoXsmm/g3XhvMh7mtf6NENqVffV9wGwF7n5aa5s30J8po/6frvUaovYB735bygC39s9Fsr2cwylnCtpmxdiSCbjoMwNBPmsTW3NSoQL3jqVC0TWLOfhOvYeJhK4a/uKa1exSW1kUEs51SmFGbvbM+JyzMzNqO9XsE+7pjSjS7bnrVIyJ6A275t+0NKoimpTXfVVN1TJ1XUj+niba2z0FvCYnaVWobINwHgtyx8eMwMFhHNcaz42s5N4J0A/wCxzzC2sTiGkNZRBsIa0AzGpJ4nWxMWJAsrYnBAZLkPvE/lEG2TvaMpPIbxM2MNsZsjXbM6Uxm/4vl7pvYfDpTUEqOijTvJ+0fpK2/FaxcW0XbUZmIb469kltKtbeEN5Zn6wOZXiqXs5VOYFhzcMo8+MepbPWl8V2PM/B4D9ZvbR2pbpwtMg4zevfPv4zVpV6z2y8Spq9Wox2zNtRb1C44i87fiVXI5acIzQF5VswJCnNJgG23JFAlxThKVLnNL/wBKcAEDeUi4YEWP6HpEPe1uZzXWLPp0Y5Tw+V5oYPZ3zEDoMz+n1j4wSDgT4qPPIyCtWBMe/stCiwlu0FiLRnVBbSbr4BCMg1+8ETJ2m9HD/wDGqBTwUZufwjMd5yma870wAZ4QnTutFm13sJh46rlK7W9pxmKNO33nzP8AaMh5mYuzq1StU3nZiFz5C/AWGXXwl+F+C1XHbqQ0cNfK3mvOrvhabLkBJhGnTbo4FrGwbqXacbkryaRujFEjdGbDkK+gf6ft/KxHfS9H/Se53ioCDUa9Db14Tw/+nJ7NfoaZ8veT1IxRUEGzZ37Qv3/vpPlfiLSazo0P0CVQA37p5eEeU8U0KhHGZO0dj3Jq4RVWoT2hoDfVl5Hnz4WOrbYp7WsBfKyjXvJlHxG7xz/eky30nVQQ7L3nH3VZxTcOZpi6xlphB8aluJIvc8ug84limZjct9LzUx6Cp2hk3EfN/n1meKfE5DmcgPEzUw9KmGggZacFkVcZWuJieGvMkyfNZdXBk5lr+H+ZVMCZpvjKK6tc8lBP10+smjjlJ7FMnqSAB36zQa4gWCUH1SJhK09ls1hNJdnimu6M2Op5DkP1hqeOsBZRnxzPlFW2q5JsF1PD9TEuqPNtF0uqH5Sj0cJPTbLw/Z3OGdu4lrZd4H1nmaeOqNYBrXNsgMr+EZw2MqgszMwFwFBLAHOwIHLMn8QmR8VxO5py4TrE84C1Ph2Fq1MQKYIyJm+WS3cRTRM6jBSOuvcuvlMDaHtVQpndRWqMOPwKPE5+Fo7tYj3m6chUVaiH5KnwsO42B7zeec2zR94O18S3U92UTQr7bQ535SAR9kWJG7pyDeRIi0HIjgdDzg5FPJtqrXoVHv7sBlW1O68GJ7Wulp4/b3YVQfiuxPPtBNfL6z1Gz8P7vDC+hYuevAX8FngPaHaHvKrFTcXOZ+1zM58Hp1K+Oe4flaTfoNkD18FsOeBhAYjaAt3BJ8YhIVXLMFXMk2A5z02BwgpIF46k8zximwtm7o9647RHZB+yDx7zNRp9m4jILLedEJ505506EuV5RI3Rl8dsmrQJ31NhqbEW/qU5r6dYOhKA9rhIK4vdf6d1LNVHNUPkWH5z19anbPyngvYmtu17fOjDxFm/7TPoLjeUc5878QZFU849IUziWVCeKCBlveA/P998SxBtcn/xHq+WXAD0mBtOqWNuHATMY6CAM091PbG0ckHFbTtkg/EfyH6zNrVGqa3J5mENMcc+kIWCfFrwUTUpM2RtPMKcMBMMCFh8DxaaO4FFra5W/WK4aoWaGxL5/T6RzKm96LrmFtzn5BBxNewv1lKygMbaE7w7mzHrEcdUsehtHaDb9FW40z7tu611P1tF1jsPadDb7fbqQluZ8oI4rU2Am9WXoC/lkPqRNPbeKFSqiLmU488wQOvPzmVgKnu6NWpxNkXqdbekFs2qd+9yzWzOpzzPiQDboOomH8TptftvdoNkdbOJ7SmU8Q6nO7/NlPKMv+Xcx3f9oam8U5AOo7gQt/7laeXwW0S1Qg5kgg9SDNzaL3a2u6At+Z1Y+ZM8X7woxdTZg7W7rm30mr8Owo/BNY4Xi3KSSPW60nUXVQ6mMwAPAR6hej9qtofyhTQ2G4t/EDKea2Tsq5FSoMtVB+194jlH8PhnqkVK+gzVbEDvKzRaW4LDDC0t2M9ffqgc50/NnyyHIe/FBaDaEaDaWhKQXnTnnRgXF9CJSuvbUE9dR3HhPI7b9kBm+G7J40zkrdx+yfpNjC4kA5Ajx/xNYEOLg+c+cw+KLbsKzhvKBjRfNNmVjRqqzAqyMN5SLEcxbuvPqmHbS2mU85tvYi1hcdmoB2W5j5W5j0jvsrii1P3biz0juMDrb7J7rekqxdVtZgeMxn76qh5FRshaePGU8tjKtzurPUbTNkniNpV9y4HxH6D/ADJMMwXemNJfFNRXxQTJc258ooKhJuYmHvD0RcynZc8yVoMY2mIC3NlrkzHhl5y+JFrX4/QGObHwRdAi2ue2LkDeIIW1z5xzHbPupAPaHDS/OxhNrMY7ZlR4im9xBaLcV5DHU7gjiMx+Y/fKH9matxUQ8QB5g2Pnb6RjF0glmc2vpzJ5AQOyKBWu2W6pAYdALk+RELGQ6l4eqXsyydMintp1tyhTQfEx3ulyNT0CkS+y193S3zq+SX1K6moe/Lw3esVWj/E1SxypU7Bj83/THPhfwEexLbzX5ZAcE5qszDS31QUyLTtO6TMd7T+2R/FIKlT3bg455gfU9B5kDjC7zMwmzAhux3je+mQP5majQbTcBVDajmAhpiUJoJoRoJowIEJoNoRoNo4LiC86c86MC5C10xE0sDj7ay4FP5E/tWFUJ/y1/tUT4ynQ2DIR1SHiCnhWBkHDWcVk1A3WHF05HmQcx4jjB0qi/Isbw+KQfZt4n9ZR8zTLfBSNpEKu3j/LDD93nzbaGK33J62HcMhPrNahTq0iBe2uRzHdPGv7G0T8Faop+8qP6bsdh6jWtg8VTQDQZcvKURebuB2a2pFu/wDSa+B9mDSzR0dubBlPgMwPON/wFa9jTOfFSGHjbSWfiKUWKe5+0bI+zKVyu4cwljbUG9728LzsdiEpgH4iTbdGinjvHhblrMmsd3GuNLUSOXwqw/OMbOpb4qp/7br0LBlceaAzF+IYupRaXMGjT2cSLcxxR0qNOqGF5zNhzDQfCA4dgsTauHZ3VnzY3HQAHKw4DWaT4B2SnTS4LA778VS4yA4sSBb+kzW/gFB3nICrqTwPLqekBiMWahK0VJGhty5FtAP30For1HUmMESIknIffkNbTZerVaYqOIjZBtoLeUDzSzKlNBSpgWHLMDnY8TzbyyzKrGNHBn/cqKvRO0fPQfWUIoLzY82I9NPpK6DQwQ0Ezck6n3posx+LptJOZSTVRwz7oM7x0Ux18ag0sIu+0BwMpBekfjKjvyM+qAaFQ/ZkHBVP3aXfGnlAVMYf2YwNcV6cUeXgubBtxvBnBnmYJtoc7/SSuPX5iO+HsVAuH8UPYPoVz4JuBkRunWvobzoG9cNUs4qs2xWsaoGkGcTEixOskGfNyxuslb5YNU8tcwi1jM8PDK8MPKW4QtXBY9qbbw8RwI6w9VxvXT4WzHTmp6gzIR4zTeHMpRIWpSqx7C4ixvy07+Ex6bzRwiH4jkOBPPmOcW4WQl6eqIlS/vFVsty5AJtoQDrnJo7OpoG3LoWzOZPM94zJ/wATqJ4JY9zLf1hAWGqsOtj6xLhNo98Uxrm2nTl2ztp6rIx2yq97hFqgDIk2pp0FJbnzvFEwVSqd01r2+xTG6F89B4T0yVv3eWfdcWYDwyPmJx1auB8hjoB6kHygck1rKeZZtdSQPJeVqezhAJbdHUsWb9Jk4zZJ+y49PQT1G0tjtrRe/wBxjY+BOR8bTzOKrOrbrqytyYEHv7usdhcXiBc36x9/RR1xUc/ZZTA/lHpYH1KxcVs511PkbxQUzewm0924E+EDid2nYnX95TUZ8Sc4QLnkir0qmGaN60gnIaoWHwhFri5OgJyzmw+B3VyAJ42At4TBXHdoG/GemxrsgzFri9rzNxuPrU6jAdZshweGZXDjV8eHZefxwPHzzmNXUz0uJqgr2TluksCB2eGvfaZIpgzZwOLFRk7MEZrmKwwwjwAZBuPfu8jRZlIspuLidNA0ZMtNSdEneStVkkTPw+0G0bPqMj5aGPU64bT/AD5T59+DcxagqMfkVcS6mUBEkQAyEt0phDGKbRRTDK8cGKZxTqVIb3xOZN5nipCq8LdpUrQSpNDC41xkGPdczGR4anUin0pzXdtb9KuT177QoqA8/Aj/ABMelWjHv5I6nCqZXcdZ6/dMsRz9YPEbjjdqBXXkwJt1HI90Aal9D5wNStzA8DaAL5lNFRzcgs7aOxr3OGqFT8hNh+Fs/qPETyeNwVVW/nAhuvEdDoR1ntmxaj7B/uH/AOYvW2hcbpRSOTZyik57fyi3b6f+80yo2lVneEknhPobfTkvK4PBljYKTyGec1drVHuFfs2VRY62At8OovaGxLEj+U5p/dFlU+Ki/neY1ZCp7Qt6Hx4wmYKpiKgqVnC2QbJ8z9j1RVMWzDs2KVMxxdHoPvPRDqNfIZDXv5SiiWMrNpjAwbLVi1qrqrtpxv7tyA0CIh5yYMGdCSNlJoIdBKIIdBBJVDijJUPf3xhH8PrAKIVREkArorvbaUwkteCtJDGDsr2/nMIwMOpiytDKZ6EJqNKZpGGVotTaXepALUuZKaFaGp1LzL95C0a8krNsnsOzcJ9qlpBrXi1SpAGpIyyQqWvTFYcojVMN72BqzgcW5p4IcLJZ2gHrH/B0h3EUqrGtqkFdB0Qam7wy9IOQ6wDIeEvpYw5Ouk1KDHXFvfBHBnRffYdZ0tbVYRMqU4Z82jxR0EMiyqLDpOEpLirIsKokLLCAlFSZAM4mVvOhcCKphFMAGnb87C7CaDzi8WDyd+eLbJjWopactSBLTryWo1PaE4tW8o7xYPLl7yQshEib8kPFt6WRotzFQwwiuIN6d4QGcIhzCmkg3WdVp2gCs0a6xN1jaaE2slikmEaRLGugILq6w6wCQ6y8rNKusJBrJJgoCpMoTOJkEwoXVBacGgyZwMMJgCOGk70AWl1M8U0NViZG/KkypiXtlMARw04NAXlg0lc1MARSZymVUy0DYRtEJlc4QCApPDqYO7GSYShVBEqomk0UroJ3dJZekGE6EYTowNsg2kNTDqYuphUl5CgKODOJlCZ14MIVJMoTJJlSYcIgoYym9JYwRMIJzAiFpdDAXhaZglODUeUMuBIIi3FEAqTryWErEOTArq0teDE4mJlHCOjRgVoiGhFadiV0mycDwNWUDyHaMhTON0u0mS06GAglLIYdIsphlMqcFKUW8rK3nXnIXoViZUzrypM6jAXMYG8u5g1nZsnsCtDUYGFoaxRKe0J2mJJWWpjKSYnalEWwlnlLQjSsme9MaF0GTJYysU1y8uvLAys6PaZQOyRbzi0oDOvHhTOUmTKXnRgalSlkhSYFJe8oKWUQSbygMkGeXVaUJnXlWMFMaFSoZIlL3MIIL04CAul6Jzg5amc4kuTwtKnJcylNpzNEVHQiiVRoImXaDkLnIgCokgSwEuEg7YCINQrSIVlgmMppGUl66868i86XNCmcpvOgyZ0cGpRCAplrwcsI6EMK4lhKAy14K6ArEwVRpcwFWcTWiVamIUQawkS8pwXThIvOvJnFMCcBlyYEHKVVzJKjpXQUeRuyt5dTInuMprDZSqw4WUQxhTFbUlNyCVqLFXEcrmJsZrYfJRPMqAJcrIQyahlrTdIcboBkyFOcmUylk3X/2Q==");
+            -webkit-background-clip: text;
+        }
+            #website{
+            transform:rotate(0deg) scale(1);
+            transition: transform 2s;
+            }
+
+        
+        #website:hover{
+            transform: rotate(360deg) scale(2);
+        }
+        .indian{
             text-align: center;
         }
-        table{
-            width:1000px;
-            height:400px;
-            padding: 50px;
-            margin-top: 0px;
-
+        nav{
+            clear: both;
+            color: rgb(207, 38, 38);
+            background-color: rgb(121, 8, 165);
+            height: 30px;
         }
-    th{
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-size: 90%;
-        border-top:5px solid rgb(27, 7, 117);
-        border-bottom:5px solid rgb(57, 11, 95); 
-        text-align: left;
+        nav ul{
+            margin: 0px;
+            padding: 5px auto 5px auto;
+        }
+        nav li {
+          display: inline;
+          margin-right: 60px;
+        }
+        nav li a {
+            color: aquamarine;
+    
+        }
+        nav li a:hover{
+            color: chartreuse;
+        }
+        section.courses{
+            float: left;
+            width: 70vw;
+            border-right:1px solid royalblue;
+        }
+        article{
+            clear: both;
+            overflow: auto;
+            width: 100%;
+        }
+        hgroup{
+            margin-top: 40px;
+        }
+        figure{
+            float: left;
+            width: 300px;
+            height: 300px;
+            padding: 2px;
+            margin: 20px;
+            border: 1px solid royalblue;
+        }
+        figcaption{
+            font-size: 90%;
+            text-align: left;
+        }
+        aside{
+            width: 230px;
+            float: left;
+            padding: 0px 0px 0px 20px;
+        }
+        aside section a{
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid rosybrown;
+        }
+        aside section a:hover{
+            color: rgb(223, 211, 216);
+            background-color: chartreuse;
+        }
+        a{
+            color: rgb(232, 229, 238);
+            text-decoration: none;
+        }
+        .karan{
+            font-size: 200%;
+            color: saddlebrown;
+            margin: 10px 0px 5px 0px;
+            padding: 10px;
+        }
+        footer{
+            clear: both;
+            height: 150px;
+            color: beige;
+            background-color: black;
+        }
+        .foote{
+            text-align: center;
+            padding: 10px;
+        }
+        footer ul{
+            margin: 0%;
+        padding: 5px 20px 5px 20px;
+        }
+        footer li{
+            margin: 0%;
+            padding: 5px 20px 0px 450px;
+        }
+        footer li:hover{
+            background-color: yellow;
+        }
+        @media  and(max-width:1200px) {
+    body{            color: rgb(6, 12, 6);
+            background-color: burlywood;
+            background-position: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.4em;
+            margin: 0px;
+ 
 
     }
-    tr{
-        background-color: yellow;
-        
-        border-left: 5px solid blue;
-    }
-    .special{
-        background-color: rgb(57, 10, 167);
-        padding: 10px;
-    }
-    .thank{
-        width: 50px;
-        text-align: center;
-        color: blue;
-        background-color: brown;
-    }
-    .order{
-        width: 150px;
-        height: 30px;
-        color: violet;
-        background-color: black;
-        text-transform: uppercase;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: larger;
-        font-weight: bolder;
-        text-align: center;
-    }
-    #input{
-        background-color: aqua;
-        width: 600px;
-        margin-left: 10px;
-        font-size: large;
-        font-weight: bold;
+        }
+        @media  and(max-width:1000px) {
+    body{            color: rgb(6, 12, 6);
+            background-color: burlywood;
+            background-position: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.4em;
+            margin: 0px;
+ 
 
     }
-    input#submit{
-        color:black;
-        text-shadow: 0px 5px 5px red;
-        text-align: center;
-        margin-left: 300px;
-        border-bottom: 2px solid red;
-        background-color:red;
+        }
+        @media  and(max-width:700px) {
+    body{            color: rgb(6, 12, 6);
+            background-color: burlywood;
+            background-position: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.4em;
+            margin: 0px;
+ 
+
     }
-   input#submit:hover{
-        background-color: yellow;
+        }
+        @media  and(max-width:480px) {
+    body{            color: rgb(6, 12, 6);
+            background-color: burlywood;
+            background-position: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            line-height: 1.4em;
+            margin: 0px;
+ 
+
     }
+        }
     </style>
 </head>
 <body>
-    <h1> OUR FAMOUS FOODS</h1>
-<table>
-    <tr>
-        <th class="money"> </th>
-        <th class="money"> Foods</th>
-        <th class="money"> Top Prices(in RS.)</th>
-        <th class="money"> Low Prices(in RS.)</th>
-        </tr>
-        <tr>
-            <td class="thank"> 1</td>
-            <td class="special"> Special Pizza</td>
-        <td> 200</td>
-        <td>100</td>
-        </tr>
-        <tr>
-            <td class="thank">2</td>
-            <td class="special">Cheese Burger</td>
-            <td>70</td>
-            <td>30</td>
-        </tr>
-        <tr>
-            <td class="thank">3</td>
-            <td class="special"> Samosa</td>
-            <td> 20</td>
-            <td>10</td>
-        </tr>
-        <tr>
-            <td class="thank">4</td>
-            <td class="special">Petiz</td>
-            <td>100</td>
-            <td>80</td>
-        </tr>
-        <tr>
-            <td class="thank">5</td>
-            <td class="special">Chaumeen</td>
-            <td>50</td>
-            <td>30</td>
-        </tr>
-</table>
-<h1 class="order">
-Order now
-</h1>
-<div id="input">
-    <p>
-    Name:<input type="text" name="name" placeholder="Enter name">
-</p>
-<p>
-    Mobile No:<input type="number" name="number" placeholder="Enter mobile no.">
-</p>
-<p>
-    Email:<input type="email" name="email" placeholder="sukhdev34@gmail.com">
-</p>
-<p>
-Address:<textarea name="name" cols="15" rows="7"></textarea>
-</p>
-</div>
-<p>
-    <input type="submit" id="submit" value="Pay now"> 
-</p>
+    <div class="wrapper">
+<header>
+    <h1 id="website"> APNI  FAMILY RECIPE'S</h1>
+    <h3 class="indian"> INDIAN FAMOUS FOOD</h3>
+    <nav>
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ORDER NOW</a></li>
+            <li><a href="prices.html">PRICE LIST</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+    </nav> 
+</header>
+<section class="courses">
+    <article>
+        <figure>
+       <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-1.jpg" height="300" width="300">
+        <figcaption> pizza</figcaption>
+        </figure>
+        <hgroup>
+            <h2>Indian vegetarian</h2>
+            <h3>
+                five week courses in indian
+            </h3>
+        </hgroup>
+        <p>
+            This is a five week course in india teaching with best recipician's. After this 
+            you make a king of the foods.
+            India is a best example of vegetarine food.
+        </p>
+    </article>
+    <article>
+        <figure>
+            <img src="https://www.inspiredtaste.net/wp-content/uploads/2016/08/Easy-Homemade-Hamburger-Recipe-1-1200.jpg" height="300" width="300">
+            <figcaption> Burger</figcaption>
+        </figure>
+        <hgroup>
+            <h2> Burgers master class</h2>
+            <h3> One day workshop</h3>
+        </hgroup>
+        <p> An-intensive one day classes coure looking at how to create
+            the most delicious burgers at home in free of cost.
+        </p>
+    </article>
+</section>
+<aside>
+    <section class="popular-recipes">
+        <h2> popular recipes</h2>
+        <a href="">Burgers</a>
+        <a href="">pizza</a>
+        <a href="">Samosa</a>
+        <a href="">Sahi-paneer</a>
+        <a href="">Prata's</a>
+    </section>
+    <section class="contact-detail">
+        <h2 class="karan">Adress:</h2>
+        <p> APNI FAMILY RECIPE's<br>
+            KOSI-KALAN CHHATA(MATHURA)<br>
+            Near old bus stand<br>
+            NH-4 Dehli Highway 
+        </p>
+    </section>
+</aside>
+<footer>
+  <h2 class="foote">  &copy: 2011 APNI  FAMILY RECIPE'S</h2>
+  <ul type="none">
+  <li><a href=""> Privacy Policies</a></li>
+  <li><a href="">Our founder</a></li>
+  <li><a href="">Our Team Member</a></li>
+</footer>
+    </div>
 </body>
 </html>
